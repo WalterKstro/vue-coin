@@ -1,8 +1,16 @@
 import Vue from 'vue'
 import App from './App.vue'
+import "@/assets/tailwind.css";
+import router from './router'
+import store from './store'
+import Chartkick from 'vue-chartkick'
+import Chart from 'chart.js/dist/chart'
 
+Vue.use(Chartkick.use(Chart))
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App),
+  router,
+  store,
+  render: h => h(App)
 }).$mount('#app')
